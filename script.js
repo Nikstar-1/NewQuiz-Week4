@@ -50,15 +50,28 @@ var startScreen = document.getElementById("startScreen");
 var startButton = document.getElementById("startQuizButton");
 
 var questionsScreen = document.getElementById("questionsScreen");
+var timer = document.getElementById("Timer");
 questionsScreen.style.display = "none";
 var questionsTitle = document.getElementById("questionToBeAsked");
 var answersSection = document.getElementById("answers");
 
 var highscoresSection = document.getElementById("highScoresScreens");
 highscoresSection.style.display = "none"
+var timeRemaining = 45
 function startQuiz() {
   startScreen.style.display = "none";
   questionsScreen.style.display = "block";
+  var countdown = setInterval(function () {
+    timeRemaining--;
+    timer.textContent = "Timer" + timeRemaining;
+
+    if (timeRemaining === 0 || currentIndex === questions.length) {
+        clearInterval(countdown);
+        setTimeout(endQuiz, 500);
+    }
+}, 1000);
+
+
   displayQuestions();
 }
 function displayQuestions() {
@@ -95,4 +108,5 @@ function endQuiz() {
     highscoresSection.style.display = "block"
 }
 startButton.onclick = startQuiz;
+
 
