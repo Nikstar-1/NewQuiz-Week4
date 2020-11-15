@@ -48,4 +48,23 @@ let questions = [
 
 ];
 
+var startScreen = document.getElementById("startScreen")
+var startButton = document.getElementById("startQuizButton")
 
+var questionsScreen = document.getElementById("questionsScreen");
+questionsScreen.style.display = "none"; 
+var questionsTitle = document.getElementById("questionToBeAsked");
+var answersSection = document.getElementById("answers");
+
+var highscoresSection = document.getElementById("highScoresScreens"); 
+
+function startQuiz(){
+    startScreen.style.display = "none"; 
+    questionsScreen.style.display = "block";
+    
+} 
+function displayQuestions(){
+    
+}
+
+startButton.onclick = startQuiz
