@@ -55,7 +55,7 @@ var questionsTitle = document.getElementById("questionToBeAsked");
 var answersSection = document.getElementById("answers");
 
 var highscoresSection = document.getElementById("highScoresScreens");
-
+highscoresSection.style.display = "none"
 function startQuiz() {
   startScreen.style.display = "none";
   questionsScreen.style.display = "block";
@@ -63,20 +63,36 @@ function startQuiz() {
 }
 function displayQuestions() {
   questionsTitle.textContent = questions[currentIndex].title;
-  var possibleAnswers =questions[currentIndex].choices
-  possibleAnswers.forEach(function(answer){
-      var answerButton = document.createElement("button")
-      answerButton.textContent =answer
-      answerButton.setAttribute("value", answer);
-      answerButton.onclick = checkUsersAnswer
-      answersSection.appendChild(answerButton)
-  })
+  answersSection.innerHTML = "";
+  var possibleAnswers = questions[currentIndex].choices;
+  possibleAnswers.forEach(function (answer) {
+    var answerButton = document.createElement("button");
+    answerButton.textContent = answer;
+    answerButton.setAttribute("value", answer);
+    answerButton.onclick = checkUsersAnswer;
+    answersSection.appendChild(answerButton);
+  });
 }
-    
-function checkUsersAnswer(){
-    var answerSelected = this.value;
-    if(answerSelected === questions[currentIndex].answer){
-        alert("Correct")
-    }
+
+function checkUsersAnswer() {
+  var answerSelected = this.value;
+  if (answerSelected === questions[currentIndex].answer) {
+    alert("Correct");
+  } else {
+    alert("Incorrect");
+  }
+  currentIndex++;
+  var totalQuestions = questions.length;
+  if (currentIndex === totalQuestions) {
+    endQuiz();
+  } else {
+    displayQuestions();
+  }
+}
+
+function endQuiz() {
+    questionsScreen.style.display = "none";
+    highscoresSection.style.display = "block"
 }
 startButton.onclick = startQuiz;
+
