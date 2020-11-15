@@ -67,9 +67,16 @@ function displayQuestions() {
   possibleAnswers.forEach(function(answer){
       var answerButton = document.createElement("button")
       answerButton.textContent =answer
+      answerButton.setAttribute("value", answer);
+      answerButton.onclick = checkUsersAnswer
       answersSection.appendChild(answerButton)
   })
-
 }
-
+    
+function checkUsersAnswer(){
+    var answerSelected = this.value;
+    if(answerSelected === questions[currentIndex].answer){
+        alert("Correct")
+    }
+}
 startButton.onclick = startQuiz;
