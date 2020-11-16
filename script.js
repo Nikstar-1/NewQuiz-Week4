@@ -57,7 +57,7 @@ var answersSection = document.getElementById("answers");
 
 var highscoresSection = document.getElementById("highScoresScreens");
 highscoresSection.style.display = "none"
-var timeRemaining = 45
+var timeRemaining = 60
 function startQuiz() {
   startScreen.style.display = "none";
   questionsScreen.style.display = "block";
@@ -107,6 +107,14 @@ function endQuiz() {
     questionsScreen.style.display = "none";
     highscoresSection.style.display = "block"
 }
+
+var restartButton = document.querySelector ("button.restartQuizButton");
+var clearScreenButton = document.querySelector ("button.clearScreenButton");
+
+finalScore.JSON.parse(localStorage.getItem("finalScores") || "[]" );
+highscoresSection = document.getElementById("highScoresScreen");
+console.log("restart")
+
 startButton.onclick = startQuiz;
 
 
