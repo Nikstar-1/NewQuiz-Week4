@@ -45,6 +45,7 @@ let questions = [
     answer: "Cascading Style Sheet",
   },
 ];
+var score = 0;
 var currentIndex = 0;
 var startScreen = document.getElementById("startScreen");
 var startButton = document.getElementById("startQuizButton");
@@ -90,9 +91,10 @@ function displayQuestions() {
 function checkUsersAnswer() {
   var answerSelected = this.value;
   if (answerSelected === questions[currentIndex].answer) {
+      score++;
     alert("Correct");
   } else {
-    alert("Incorrect");
+    timeRemaining = timeRemaining -10; alert("Incorrect"); 
   }
   currentIndex++;
   var totalQuestions = questions.length;
@@ -108,13 +110,18 @@ function endQuiz() {
     highscoresSection.style.display = "block"
 }
 
-var restartButton = document.querySelector ("button.restartQuizButton");
-var clearScreenButton = document.querySelector ("button.clearScreenButton");
+function saveResults(){
+    var playerName = $("input[name='playerName']").val();
+    var previousResult = localStorage.getItem(playerName);
+    localStorage.setItem(playerName,score);
+    $(".previousScore").html(previousResult);
+    $(".finalScore").html(score);
 
-finalScore.JSON.parse(localStorage.getItem("finalScores") || "[]" );
-highscoresSection = document.getElementById("highScoresScreen");
-console.log("restart")
+}
+
+
 
 startButton.onclick = startQuiz;
+
 
 

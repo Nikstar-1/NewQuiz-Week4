@@ -29,9 +29,12 @@
     </div>
     <div id="highScoresScreens" class="container-fluid">
       <h5>Thanks for taking my Quiz!</h5>
-      <h5 id="finalScore"></h5>
+      <h5>Your Final Score : <div class="finalScore"> </div></h5>
+      <h5>Save Results For Next Time</h5> <input name="playerName" type="text" placeholder="name" id="playerName"></input>
+      <button id="saveResultsButton" onclick="saveResults()">Save Results</button>
       <button id="restartQuizButton">Restart Quiz</button>
       <button id="clearScreenButton">Clear Screen</button>
+      <h5>Your Previous score : <div class = "previousScore">  </div></h5>
     </div>
     <script src="script.js"></script>
     <script
