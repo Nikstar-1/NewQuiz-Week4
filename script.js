@@ -1,5 +1,10 @@
 let questions = [
   {
+    title: "Which is used for Connect To Database:",
+    choices: ["PHP", "HTML", "JS", "All"],
+    answer: "PHP"
+  },
+  {
     title: "Commonly used data types DO NOT include:",
     choices: ["strings", "booleans", "alerts", "numbers"],
     answer: "alerts",
@@ -14,6 +19,7 @@ let questions = [
     choices: ["JavaScript", "terminal / bash", "for loops", "console.log"],
     answer: "console.log",
   },
+  
   {
     title: "What is a DOM in JavaScript?",
     choices: ["Data of Mine", "Document of Master", "Data Object Modal", "Document Object Model"],
@@ -44,6 +50,17 @@ let questions = [
     choices: ["Cascading Style Sheet", "Calculating Solutions Sheet", "Computer String Sheet"],
     answer: "Cascading Style Sheet",
   },
+  {
+    title: "How would you access the second element in an array?",
+    choices:  ["nums[2]", "nums[1]","nums.1", "nums_1"],
+    answer: "nums[1]",
+  },
+  {
+    title: "Which is not a JavaScript Framework?:",
+    choices: ["Python Script", "JQuery","Django", "NodeJS"],
+    answer: "Django"
+  },
+  
 ];
 var score = 0;
 var currentIndex = 0;
@@ -55,7 +72,7 @@ var timer = document.getElementById("Timer");
 questionsScreen.style.display = "none";
 var questionsTitle = document.getElementById("questionToBeAsked");
 var answersSection = document.getElementById("answers");
-
+var resultSection = document.getElementById("result");
 var highscoresSection = document.getElementById("highScoresScreens");
 highscoresSection.style.display = "none"
 var timeRemaining = 60
@@ -69,6 +86,7 @@ function startQuiz() {
     if (timeRemaining === 0 || currentIndex === questions.length) {
         clearInterval(countdown);
         setTimeout(endQuiz, 500);
+        
     }
 }, 1000);
 
@@ -92,9 +110,10 @@ function checkUsersAnswer() {
   var answerSelected = this.value;
   if (answerSelected === questions[currentIndex].answer) {
       score++;
-    alert("Correct");
+      resultSection.innerHTML = "Correct";
   } else {
-    timeRemaining = timeRemaining -10; alert("Incorrect"); 
+    timeRemaining = timeRemaining -10; 
+    resultSection.innerHTML = "Incorrect";
   }
   currentIndex++;
   var totalQuestions = questions.length;
@@ -108,6 +127,7 @@ function checkUsersAnswer() {
 function endQuiz() {
     questionsScreen.style.display = "none";
     highscoresSection.style.display = "block"
+    timeRemaining = 0;
 }
 
 function saveResults(){
@@ -119,9 +139,20 @@ function saveResults(){
 
 }
 
+function restartQuiz(){
+  highscoresSection.style.display = "none";
+  startScreen.style.display = "block";
+  
+}
+
 
 
 startButton.onclick = startQuiz;
 
 
 
+//timer goes to -17
+//need to make clear screen function
+//need to make restart button function
+//need to remove alerts and skip to next question
+// need to sort our css basic display - then i will change the styling myself 
