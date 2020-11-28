@@ -12,20 +12,21 @@
       integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
       crossorigin="anonymous"
     />
-    <link rel="style.css" />
+    <link rel="stylesheet" href="style.css">
     <title>Code Quiz!</title>
   </head>
   <body>
+    <body class="bodyClass"></body>
     <div id="startScreen" class="container-fluid">
-      <h1>Welcome to my Quiz</h1>
-      <p>when you click the button below you will be presented with a series of q's on JS</p>
+      <h1>Web Development Quiz</h1>
+      <p>Test your Knowledge</p>
       <button id="startQuizButton">Start Quiz</button>
     </div>
-    <div id="questionsScreen" class="container-fluid">
+    <div id="questionsScreen"  class="container-fluid">
         <h3 id="Timer">Timer</h3>
       <h4>Please read and answer the question below:</h4>
       <h3 id="questionToBeAsked"></h3>
-      <div id="answers"></div>
+      <div class="answersButton" id="answers"></div>
       <h3 id="result"></h3>
     </div>
     <div id="highScoresScreens" class="container-fluid">
