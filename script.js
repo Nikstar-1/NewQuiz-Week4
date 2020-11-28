@@ -85,7 +85,7 @@ function startQuiz() {
 
     if (timeRemaining === 0 || currentIndex === questions.length) {
         clearInterval(countdown);
-        setTimeout(endQuiz, 500);
+        setTimeout.endQuiz();
         
     }
 }, 1000);
