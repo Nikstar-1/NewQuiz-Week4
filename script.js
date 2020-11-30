@@ -85,8 +85,7 @@ function startQuiz() {
 
     if (timeRemaining === 0 || currentIndex === questions.length) {
         clearInterval(countdown);
-        setTimeout.endQuiz();
-        
+        endQuiz();
     }
 }, 1000);
 
@@ -103,6 +102,8 @@ function displayQuestions() {
     answerButton.setAttribute("value", answer);
     answerButton.onclick = checkUsersAnswer;
     answersSection.appendChild(answerButton);
+    $("element").addClass("myStyle")
+   
   });
 }
 
@@ -151,8 +152,6 @@ startButton.onclick = startQuiz;
 
 
 
-//timer goes to -17
-//need to make clear screen function
-//need to make restart button function
-//need to remove alerts and skip to next question
-// need to sort our css basic display - then i will change the styling myself 
+
+
+
