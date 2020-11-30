@@ -1,17 +1,15 @@
 
-### Website Title and Description
+## Website Title and Description
 
 
 Coding Quiz Challenge 
 
 On a journey to becoming a full-stack web developer, it’s likely that I’ll be asked to complete a coding assessment, perhaps as part of an interview process. A typical coding 
-
 assessment is a combination of multiple-choice questions and interactive coding challenges.
-
 To help me to become familiar with these tests and give a chance to apply the skills from module 4, this project is a timed coding quiz with multiple-choice questions. 
 
 
-## Following the common templates for user stories, I have been required to frame this challenge as follows:
+Following the common templates for user stories, I have been required to frame this challenge as follows:
 
 
 User Story
@@ -23,33 +21,23 @@ I WANT to take a timed quiz on JavaScript fundamentals that stores high scores
 SO THAT I can gauge my progress compared to my peers
 
 
-### Acceptance Criteria
+## Acceptance Criteria
 
 
 GIVEN I am taking a code quiz
-
 WHEN I click the start button
-
 THEN a timer starts and I am presented with a question
-
 WHEN I answer a question
-
 THEN I am presented with another question
-
 WHEN I answer a question incorrectly
-
 THEN time is subtracted from the clock
-
 WHEN all questions are answered or the timer reaches 0
-
 THEN the game is over
-
 WHEN the game is over
-
 THEN I can save my initials and score
 
 
-### Challenges 
+## Challenges 
 
 
 I found getting the timer on this project challenging then, to reduce 10 seconds for every wrong answer. 
@@ -58,7 +46,7 @@ I found getting the timer on this project challenging then, to reduce 10 seconds
 Alligning CSS. 
 
 
-### Success's
+## Success's
 
 
 Seeing an activated quiz with working functionality. 
@@ -70,19 +58,19 @@ Seeing an activated quiz with working functionality.
 !["Start Page"](Screenshots/mainPage.png "Start page.") 
 
 
-### How to access?
+## How to access?
 
 
 This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. Or, download the sources files to use this as a template.
 
 
-### Tech
+## Tech
 
 
 This project uses HTML, CSS, and Javascript. 
 
 
-### Future_Improvements
+## Future_Improvements
 
 
 In the future, I'd like to add:
