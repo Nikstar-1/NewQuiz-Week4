@@ -115,6 +115,10 @@ function checkUsersAnswer() {
   } else {
     timeRemaining = timeRemaining -10; 
     resultSection.innerHTML = "Incorrect";
+    if (timeRemaining <= 0){
+      clearInterval(countdown);
+      endQuiz();
+    }
   }
   currentIndex++;
   var totalQuestions = questions.length;
@@ -152,6 +156,8 @@ startButton.onclick = startQuiz;
 
 
 
+//timer goes to all minus numbers and does not stop
+//buttons need to be fixed so they are seperated
 
 
 
