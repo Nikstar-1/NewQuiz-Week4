@@ -21,7 +21,7 @@
       <h1>Web Developer Quiz</h1>
       <p>Test your Knowledge</p>
       <strong>NOTE:</strong> For every incorrect answer you lose ten seconds on your timer!</p> <br>
-      <button class="answersButton" id="startQuizButton">Start Quiz</button>
+      <button class="startButton" id="startQuizButton">Start Quiz</button>
     </div>
     <div id="questionsScreen"  class="container-fluid">
         <h3 id="Timer">Timer</h3>
@@ -36,8 +36,8 @@
       <h5>Thanks for taking my Quiz!</h5>
       <h5>Your Final Score - Type your name:<div class="finalScore"></div></h5>
       <h5>Save Results For Next Time</h5> <input name="playerName" type="text" placeholder="name" id="playerName"></input>
-      <button class="answersButton" id="saveResultsButton" onclick="saveResults()">Save Results</button>
-      <button  class="answersButton" id="restartQuizButton" onclick="restartQuiz()">Restart Quiz</button>   
+      <button class="saveResults" id="saveResultsButton" onclick="saveResults()">Save Results</button>
+      <button  class="restartQuiz" id="restartQuizButton" onclick="restartQuiz()">Restart Quiz</button>   
       <h5>Your Previous score: <div class = "previousScore">  </div></h5>
     </div>
     <script src="script.js"></script>
