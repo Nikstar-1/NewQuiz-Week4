@@ -78,6 +78,7 @@ Seeing an activated quiz with working functionality.
 
 This project has been deployed to GitHub Pages. To get this project up and running, you can follow the deployment link. Or, download the sources files to use this as a template.
 
+https://nikstar-1.github.io/NewQuiz-Week4/.
 
 ## Tech
 
