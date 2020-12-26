@@ -66,11 +66,11 @@ Seeing an activated quiz with working functionality.
 ## Screenshots:
 
 
-!["Start Page"](CodeMain.png "Start page.") 
+!["Start Page"](images/start.png "Start page.") 
 
-!["Start Page"](CodeQ.png "Start page.") 
+!["Start Page"](images/Questions.png "Start page.") 
 
-!["Start Page"](CodeEnd.png "Start page.") 
+!["Start Page"](images/EndQuiz.png "Start page.") 
 
 
 ## How to access?
